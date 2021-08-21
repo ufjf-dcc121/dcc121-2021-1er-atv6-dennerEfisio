@@ -15,3 +15,8 @@ td#heroi{
 .tesouro{
     color: gold;
 }
+
+.parede{
+    font-size: 0px;
+    background-color: gray;
+}
