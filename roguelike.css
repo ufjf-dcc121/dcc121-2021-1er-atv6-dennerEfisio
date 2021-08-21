@@ -3,3 +3,7 @@ td {
     width: 30px;
     background-color: brown;
 }
+
+td#heroi{
+    color: lightblue;
+}
