@@ -474,7 +474,18 @@
 
                 function divClick(event) {
                     let target = event.target;
-                    console.log(target.classList.value);
+                    if (target.classList.contains('parede')) {
+                        target.classList.remove('parede');
+                    }
+                    else if ((target.classList.contains('orc') == false) && (target.classList.contains('tesouro') == false) && (target.classList.contains('parede') == false)) {
+                        target.classList.add("orc")
+                    }
+                    else if (target.classList.contains('orc')) {
+                        target.classList.toggle('tesouro');
+                    }
+                    else if (target.classList.contains('tesouro')) {
+                        target.classList.toggle('parede');
+                    }
                 }
 
             </script>
