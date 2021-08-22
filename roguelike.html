@@ -463,10 +463,10 @@
 
             <script>
                 const cedulas = document.querySelectorAll("td");
-                for (let i = 0; i < cedulas.length-1; i++) {
-                    const element = cedulas[i];
-                    element.classList.add('parede');
-                    
+                for (let i = 0; i < cedulas.length - 1; i++) {
+                    if ((cedulas[i].classList.contains('orc') == false) && (cedulas[i].classList.contains('tesouro') == false) && (cedulas[i].classList.contains('parede') == false)) {
+                        cedulas[i].classList.add('parede');
+                    }
                 }
             </script>
     </body>
