@@ -464,10 +464,19 @@
             <script>
                 const cedulas = document.querySelectorAll("td");
                 for (let i = 0; i < cedulas.length - 1; i++) {
+
+                    cedulas[i].addEventListener('click', divClick, false);
+
                     if ((cedulas[i].classList.contains('orc') == false) && (cedulas[i].classList.contains('tesouro') == false) && (cedulas[i].classList.contains('parede') == false)) {
                         cedulas[i].classList.add('parede');
                     }
                 }
+
+                function divClick(event) {
+                    let target = event.target;
+                    console.log(target.classList.value);
+                }
+
             </script>
     </body>
 
