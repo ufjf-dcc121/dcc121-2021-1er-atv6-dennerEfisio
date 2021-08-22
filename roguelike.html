@@ -479,15 +479,20 @@
                     }
                     else if ((target.classList.contains('orc') == false) && (target.classList.contains('tesouro') == false) && (target.classList.contains('parede') == false)) {
                         target.classList.add("orc")
+                        target.innerText = "O"
                     }
                     else if (target.classList.contains('orc')) {
-                        target.classList.toggle('tesouro');
+                        target.classList.add("tesouro");
+                        target.innerText = "T";
+                        target.classList.remove("orc");
                     }
                     else if (target.classList.contains('tesouro')) {
-                        target.classList.toggle('parede');
+                        target.classList.add("parede");
+                        target.classList.remove("tesouro");
+                        target.innerText = "";
                     }
-                }
 
+                }
             </script>
     </body>
 
